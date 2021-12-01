@@ -84,8 +84,25 @@ namespace MCD_ClassEncapsulation
                         break;
                     }
                 }
+                if (hepsiRakamMi == true)
+                {
+                    if (value.ToString().Length == 10)
+                    {
+                        telefonNumarasi = value;
+                    }
+                    else
+                    {
+                        throw new FormatException("Telefon numarası 10 haneli olmalıdır. 5XXXXXXXXX");
+                    }
+                }
+                else
+                {
+                    throw new FormatException("Telefon numarası sadece rakamlardan oluşmalıdır.");
+                }
             }
         }
+
+        public string DenemeTelNo { get; set; }
 
 
     }
